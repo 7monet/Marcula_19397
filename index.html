@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>19397</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" ariaexpanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      <a class="navbar-brand" href="#">
+        <div id="logo">
+          <img src="img/logo.jpg" alt="tytuł obrazka">
+        </div>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav text-right">
+        <li class="active"><a href="#main-page">Strona główna</a></li>
+        <li><a href="#info">Informacje</a></li>
+        <li><a href="#">link3</a></li>
+        <li><a href="#">link4</a></li>
+        <li><a href="#">link5</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Konto Premium</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <!--Ćwiczenie 3-->
+  <div class="container">
+    <div id="carouselID" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselID" data-slide-to="0"class="active"></li>
+          <li data-target="#carouselID" data-slide-to="1"></li>
+          <li data-target="#carouselID" data-slide-to="2"></li>
+          <li data-target="#carouselID" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/1.jpg" alt="zdj1"  height="100" class="center-block">
+            <div class="carousel-caption">Obraz 1</div>
+          </div>
+          <div class="item">
+            <img src="img/2.jpg" alt="zdj2"  height="100" class="center-block">
+            <div class="carousel-caption">Obraz 2</div>
+          </div>
+          <div class="item">
+            <img src="img/3.jpg" alt="zdj3"  height="100" class="center-block">
+            <div class="carousel-caption">Obraz 3</div>
+          </div>
+          <div class="item">
+            <img src="img/4.jpg" alt="zdj4"  height="100" class="center-block">
+            <div class="carousel-caption">Obraz 4</div>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carouselID" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" ariahidden="true"></span>
+          <span class="sr-only">Poprzedni</span>
+        </a>
+
+        <a class="right carousel-control" href="#carouselID" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" ariahidden="true"></span>
+          <span class="sr-only">Następny</span>
+        </a> 
+    </div> 
+  </div>
+</header>
+
+<!--Ćwiczenie 4-->
+<section id="main-page" class="jumbotron">
+    <div class="container">
+      <h1>Pierwsza sekcja strony!</h1> 
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis ut justo a porta. Phasellus vitae pellentesque ante, ut laoreet mauris. Praesent vitae urna faucibus, sollicitudin neque at, maximus est. Etiam congue libero a ex egestas, eget varius lorem vestibulum. In ac nisi lorem. Proin vulputate, mi eget suscipit euismod, sapien nisl iaculis nisi, in ultrices leo lectus eget augue. Mauris volutpat quam nec tellus tincidunt pretium. Nam efficitur ex tristique, posuere lectus sit amet, feugiat nisl. Sed iaculis neque convallis, mollis nunc in, dignissim erat. Mauris malesuada erat in nisi posuere vehicula. Ut laoreet congue nulla non aliquam.
+      </p>
+    </div>
+</section>
+  
+<div class="container text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">link 1</a></p>
+      <p><a href="#">link 2</a></p>
+      <p><a href="#">link 3</a></p>
+      <p><a href="#">link 4</a></p>
+
+    </div>
+    <div class="col-md-10 text-left">
+      <h1>Tu będzie tytuł strony</h1>
+      <table class="table">
+            <thead>
+              <tr>
+                <td rowspan="2">L.p.</td>
+                <td colspan="2">Osoba</td>
+                <td rowspan="2">Info</td>
+              </tr>
+              <tr>
+                <td>Imie</td>
+                <td>Nazwisko</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th> <td>Jan</td> <td>Kowal</td><td>Student</td>
+             </tr>
+             <tr>
+                <th>2</th> <td>Jakub</td> <td>Nowakowski</td><td>Student</td>
+             </tr>
+             <tr>
+                 <th>3</th> <td>Jarosław</td> <td>Piernikowski</td><td>Student</td>
+             </tr>
+             <tr>
+                 <th>4</th> <td>Jack</td> <td>Topolak</td><td>Student</td>
+             </tr>
+            </tbody>
+            </table>
+          </div>
+
+  </div>
+</div>
+<!--Ćwiczenie 6-->
+<section id="info">
+  <div class="container">
+    <h1 class="text-info">Informacje</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis ut justo a porta. Phasellus vitae pellentesque ante, ut laoreet mauris. Praesent vitae urna faucibus, sollicitudin neque at, maximus est. Etiam congue libero a ex egestas, eget varius lorem vestibulum. In ac nisi lorem. Proin vulputate, mi eget suscipit euismod, sapien nisl iaculis nisi, in ultrices leo lectus eget augue. Mauris volutpat quam nec tellus tincidunt pretium. Nam efficitur ex tristique, posuere lectus sit amet, feugiat nisl. Sed iaculis neque convallis, mollis nunc in, dignissim erat. Mauris malesuada erat in nisi posuere vehicula. Ut laoreet congue nulla non aliquam.
+    </p>    
+  </div>
+</section>
+
+<div class="container" style="background-color: #cfcfcf;">
+<div class="row">
+  <div class="col-sm-4">
+    <img src="img/o1.jpg" class="img-circle center-block" alt="img1" height=200 width=200>
+  </div>
+  <div class="col-sm-4">
+    <img src="img/o2.jpg" class="img-circle center-block" alt="img2" height=200 width=200>
+  </div>
+  <div class="col-sm-4">
+    <img src="img/o3.jpg" class="img-circle center-block" alt="img3" height=200 width=200>
+  </div>
+</div>
+</div>
+<!--Ćwiczenie 5-->
+<footer class="container text-center">
+    <div class="container">
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+         Polityka prywatności
+      </button> 
+    </div>
+</footer>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" arialabel="Close"><span ariahidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">POLITYKA PRYWATNOŚCI</h4>
+      </div>
+      <div class="modal-body">
+        …tu zawartość 
+      </div> 
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div> 
+    </div>
+  </div>
+</div> 
+
+</body>
+</html>
