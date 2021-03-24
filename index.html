@@ -9,6 +9,8 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet">
+  <script src="forms.js" ></script>
+
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -26,6 +28,7 @@
         </div>
       </a>
     </div>
+
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav text-right">
         <li class="active"><a href="#main-page">Strona główna</a></li>
@@ -34,15 +37,12 @@
         <li><a href="#">link4</a></li>
         <li><a href="#">link5</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Konto Premium</a></li>
-      </ul>
     </div>
   </div>
 </nav>
 
 <header>
-  <!--Ćwiczenie 3-->
+
   <div class="container">
     <div id="carouselID" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -82,10 +82,10 @@
   </div>
 </header>
 
-<!--Ćwiczenie 4-->
+
 <section id="main-page" class="jumbotron">
     <div class="container">
-      <h1>Pierwsza sekcja strony!</h1> 
+      <h1>Pierwsza sekcja strony!</h1>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis ut justo a porta. Phasellus vitae pellentesque ante, ut laoreet mauris. Praesent vitae urna faucibus, sollicitudin neque at, maximus est. Etiam congue libero a ex egestas, eget varius lorem vestibulum. In ac nisi lorem. Proin vulputate, mi eget suscipit euismod, sapien nisl iaculis nisi, in ultrices leo lectus eget augue. Mauris volutpat quam nec tellus tincidunt pretium. Nam efficitur ex tristique, posuere lectus sit amet, feugiat nisl. Sed iaculis neque convallis, mollis nunc in, dignissim erat. Mauris malesuada erat in nisi posuere vehicula. Ut laoreet congue nulla non aliquam.
       </p>
@@ -134,13 +134,35 @@
 
   </div>
 </div>
-<!--Ćwiczenie 6-->
+
 <section id="info">
   <div class="container">
     <h1 class="text-info">Informacje</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis ut justo a porta. Phasellus vitae pellentesque ante, ut laoreet mauris. Praesent vitae urna faucibus, sollicitudin neque at, maximus est. Etiam congue libero a ex egestas, eget varius lorem vestibulum. In ac nisi lorem. Proin vulputate, mi eget suscipit euismod, sapien nisl iaculis nisi, in ultrices leo lectus eget augue. Mauris volutpat quam nec tellus tincidunt pretium. Nam efficitur ex tristique, posuere lectus sit amet, feugiat nisl. Sed iaculis neque convallis, mollis nunc in, dignissim erat. Mauris malesuada erat in nisi posuere vehicula. Ut laoreet congue nulla non aliquam.
-    </p>    
+    </p>
+    <!-- Ćwiczenie 1-->
+      <form role="form" onsubmit="return checkForm();">
+        <div>
+          <label for="name">Imie</label>
+          <input type="text" class="form-control"  id="name" placeholder="Podaj imie" >
+          <p class="hide" id=”errorName”>Podanie imienia jest wymagane!</p>
+        </div>
+        <div class="form-group">
+          <label for="surname">Nazwisko</label>
+          <input type="text" class="form-control" id="surname" placeholder="Podaj nazwisko" >
+          <p class="hide" id=”errorSurname”>Podanie imienia jest wymagane!</p>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Podaj adres Email" >
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Informacje</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Informacje" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">Wyślij</button>
+      </form>
   </div>
 </section>
 
@@ -157,7 +179,7 @@
   </div>
 </div>
 </div>
-<!--Ćwiczenie 5-->
+
 <footer class="container text-center">
     <div class="container">
       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
