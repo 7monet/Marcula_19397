@@ -135,36 +135,55 @@
   </div>
 </div>
 
-<section id="info">
+<section>
   <div class="container">
     <h1 class="text-info">Informacje</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis ut justo a porta. Phasellus vitae pellentesque ante, ut laoreet mauris. Praesent vitae urna faucibus, sollicitudin neque at, maximus est. Etiam congue libero a ex egestas, eget varius lorem vestibulum. In ac nisi lorem. Proin vulputate, mi eget suscipit euismod, sapien nisl iaculis nisi, in ultrices leo lectus eget augue. Mauris volutpat quam nec tellus tincidunt pretium. Nam efficitur ex tristique, posuere lectus sit amet, feugiat nisl. Sed iaculis neque convallis, mollis nunc in, dignissim erat. Mauris malesuada erat in nisi posuere vehicula. Ut laoreet congue nulla non aliquam.
     </p>
-    <!-- Ćwiczenie 1-->
-      <form role="form" onsubmit="return checkForm();">
-        <div>
-          <label for="name">Imie</label>
-          <input type="text" class="form-control"  id="name" placeholder="Podaj imie" >
-          <p class="hide" id=”errorName”>Podanie imienia jest wymagane!</p>
+    <!-- lab4-->
+    <h1>Wypełnij Formularz!</h1>
+    <form  action="#wyslane" method="get" onsubmit="return checkForm();" on>
+      <fieldset>
+        <div class="form-group" id="name">
+          <label for="contactName">Imię</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="contactName" placeholder="Podaj imię" onblur="checkName()"/>
+            <span id="nameIcon" class="hide" aria-hidden="true"></span>
+          </div>
+          <p id="errorName" class="hide">Podanie imienia jest wymagane!</p> 
         </div>
-        <div class="form-group">
-          <label for="surname">Nazwisko</label>
-          <input type="text" class="form-control" id="surname" placeholder="Podaj nazwisko" >
-          <p class="hide" id=”errorSurname”>Podanie imienia jest wymagane!</p>
+        
+        <div class="form-group" id="surname">
+          <label for="contactSurname">Nazwisko</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="contactSurname" placeholder="Podaj nazwisko" onblur="checkSurname()"/>
+            <span id="surnameIcon" class="hide" aria-hidden="true"></span>
+          </div>
+            <p id="errorSurname" class="hide">Podanie nazwiska jest wymagane!</p> 
         </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Podaj adres Email" >
+        
+        <div class="form-group" id="mail">
+          <label for="contactEmail">Email</label>
+          <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" id="contactEmail" placeholder="Podaj email" onblur="checkEmail()"/>
+            <span id="emailIcon" class="hide" aria-hidden="true"></span> 
+          </div>
+          <p id="errorEmail" class="hide">Podanie emaila jest wymagane!</p> 
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Informacje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Informacje" required></textarea>
+        
+        <div class="form-group" id="info"> 
+          <label for="contactInfo">Informacje</label>
+          <textarea class="form-control rounded-0" id="contactInfo" rows="6" placeholder="Podaj informacje" onblur="checkInfo()"></textarea>
+          <p id="errorInfo" class="hide" >Podanie informacji jest wymagane!</p> 
         </div>
-        <button type="submit" class="btn btn-default">Wyślij</button>
-      </form>
+        
+        <input type="submit" class="btn btn-danger" value="Wyślij"/>
+      </fieldset>
+    </form>  
   </div>
-</section>
+
 
 <div class="container" style="background-color: #cfcfcf;">
 <div class="row">
@@ -187,6 +206,8 @@
       </button> 
     </div>
 </footer>
+
+
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
