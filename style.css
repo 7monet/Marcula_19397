@@ -4,6 +4,31 @@
         border-radius: 0;
 }
 
+body 
+{
+    font-size:20px;
+    font-family: 'Halvetica';
+    color:#85a186; 
+    background:#11221b;
+}
+
+section, .jumbotron
+{
+    color:#c3cac3; 
+    background:#02110b;
+}
+
+h1, h2, h3
+{
+    font-family: 'Bungee';
+    color: #2ab84d;
+}
+
+.navbar-default
+{
+    font-weight: bold;
+}
+
 .row.content 
 {
     height: 400px;
@@ -66,3 +91,7 @@ tbody tr:nth-child(2n)
 {
     background-color: lightgray;
 }
+
+.glyphicon {
+    color: #e9de4d;
+    } 
