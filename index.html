@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet">
   <script src="forms.js" ></script>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -31,8 +31,8 @@
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav text-right">
-        <li class="active"><a href="#main-page">Strona główna</a></li>
-        <li><a href="#info">Informacje</a></li>
+        <li class="active"><a href="#main-page"><span class="glyphicon glyphicon-eye-open"></span>  Strona główna</a></li>
+        <li><a href="#info-page"><span class="glyphicon glyphicon-question-sign"></span>  Informacje </a> </li>
         <li><a href="#">link3</a></li>
         <li><a href="#">link4</a></li>
         <li><a href="#">link5</a></li>
@@ -85,14 +85,14 @@
 
 <section id="main-page" class="jumbotron">
     <div class="container">
-      <h1>Pierwsza sekcja strony!</h1>
+      <h1><span class="glyphicon glyphicon-bullhorn"></span>  Pierwsza sekcja strony! </h1>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis ut justo a porta. Phasellus vitae pellentesque ante, ut laoreet mauris. Praesent vitae urna faucibus, sollicitudin neque at, maximus est. Etiam congue libero a ex egestas, eget varius lorem vestibulum. In ac nisi lorem. Proin vulputate, mi eget suscipit euismod, sapien nisl iaculis nisi, in ultrices leo lectus eget augue. Mauris volutpat quam nec tellus tincidunt pretium. Nam efficitur ex tristique, posuere lectus sit amet, feugiat nisl. Sed iaculis neque convallis, mollis nunc in, dignissim erat. Mauris malesuada erat in nisi posuere vehicula. Ut laoreet congue nulla non aliquam.
       </p>
     </div>
 </section>
-  
-<div class="container text-center">    
+
+<div class="container text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p><a href="#">link 1</a></p>
@@ -136,13 +136,12 @@
 </div>
 
 <section>
-  <div class="container">
-    <h1 class="text-info">Informacje</h1>
+  <div  id="info-page" class="container">
+    <h1 class="text-info"><span class="glyphicon glyphicon-warning-sign"></span>  Informacje </h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis ut justo a porta. Phasellus vitae pellentesque ante, ut laoreet mauris. Praesent vitae urna faucibus, sollicitudin neque at, maximus est. Etiam congue libero a ex egestas, eget varius lorem vestibulum. In ac nisi lorem. Proin vulputate, mi eget suscipit euismod, sapien nisl iaculis nisi, in ultrices leo lectus eget augue. Mauris volutpat quam nec tellus tincidunt pretium. Nam efficitur ex tristique, posuere lectus sit amet, feugiat nisl. Sed iaculis neque convallis, mollis nunc in, dignissim erat. Mauris malesuada erat in nisi posuere vehicula. Ut laoreet congue nulla non aliquam.
     </p>
-    <!-- lab4-->
-    <h1>Wypełnij Formularz!</h1>
+    <h1><span class="glyphicon glyphicon-list-alt"></span>  Wypełnij Formularz!</h1>
     <form  action="#wyslane" method="get" onsubmit="return checkForm();" on>
       <fieldset>
         <div class="form-group" id="name">
@@ -151,7 +150,7 @@
             <input type="text" class="form-control" id="contactName" placeholder="Podaj imię" onblur="checkName()"/>
             <span id="nameIcon" class="hide" aria-hidden="true"></span>
           </div>
-          <p id="errorName" class="hide">Podanie imienia jest wymagane!</p> 
+          <p id="errorName" class="hide">Podanie imienia jest wymagane!</p>
         </div>
         
         <div class="form-group" id="surname">
