@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolioApp">
 <head>
   <title>19397</title>
   <meta charset="utf-8">
@@ -9,6 +9,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet">
   <script src="forms.js" ></script>
+  <script src="angular.min.js"></script>
+  <script src="controllers.js"></script> 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 </head>
@@ -33,7 +35,7 @@
       <ul class="nav navbar-nav text-right">
         <li class="active"><a href="#main-page"><span class="glyphicon glyphicon-eye-open"></span>  Strona główna</a></li>
         <li><a href="#info-page"><span class="glyphicon glyphicon-question-sign"></span>  Informacje </a> </li>
-        <li><a href="#">link3</a></li>
+        <li><a href="#gallery-page">Galeria</a></li>
         <li><a href="#">link4</a></li>
         <li><a href="#">link5</a></li>
       </ul>
@@ -182,9 +184,24 @@
       </fieldset>
     </form>  
   </div>
+<!-- lab6 Galeria-->
+  <section id="gallery-page">
+    <div class="container">
+      <h1 class="text-danger" id="nagl"><span class="glyphicon glyphicon-picture" aria-hidden="true" id="ikonaduza"></span> Galeria{{tytul}}</h1>
+      <div class="container" ng-controller="GalleryListCtrl">
+        <div class="row content text-center">
+          <p><h3>Galeria posiada {{galleries.length}} zdjęć.</h3></p>
+          <div class="col-sm-4 text-left" ng-repeat="gallery in galleries">
+            <img src="{{gallery.thumbnailUrl}}" class="img-rounded center-block img-responsie" alt="" height=200 width=350>
+            <h3>{{gallery.title}}</h3>
+            <p><strong>Data:</strong> {{gallery.when | date:'dd-MMMM-yyyy'}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-<div class="container" style="background-color: #cfcfcf;">
+<!-- Zdjecia-->
+<div class="container">
 <div class="row">
   <div class="col-sm-4">
     <img src="img/o1.jpg" class="img-circle center-block" alt="img1" height=200 width=200>
@@ -202,7 +219,7 @@
     <div class="container">
       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
          Polityka prywatności
-      </button> 
+      </button>
     </div>
 </footer>
 
@@ -223,7 +240,7 @@
       </div> 
     </div>
   </div>
-</div> 
+</div>
 
 </body>
 </html>
