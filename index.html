@@ -184,14 +184,22 @@
       </fieldset>
     </form>  
   </div>
+<!-- lab7 wyszukiwarka-->
 <!-- lab6 Galeria-->
-  <section id="gallery-page">
-    <div class="container">
-      <h1 class="text-danger" id="nagl"><span class="glyphicon glyphicon-picture" aria-hidden="true" id="ikonaduza"></span> Galeria{{tytul}}</h1>
+<section id="gallery-page">
+  <div class="container">
+    <h1 class="text-danger" id="nagl"><span class="glyphicon glyphicon-picture" aria-hidden="true" id="ikonaduza"></span> Galeria{{tytul}}</h1>
+    <h3>Wyszukaj: <input ng-model="query"></h3>
+    <label>Sortuj:</label>
+    <select  ng-model="orderProp"  ng-options="sort as sort.label for sort in sortList">
+      <option value="title">Alfabetycznie</option>
+      <option value="when">Chronologicznie</option>
+    </select>
+    <p ng-if="orderProp">Galerie ułożone: {{orderProp}}</p> 
       <div class="container" ng-controller="GalleryListCtrl">
         <div class="row content text-center">
           <p><h3>Galeria posiada {{galleries.length}} zdjęć.</h3></p>
-          <div class="col-sm-4 text-left" ng-repeat="gallery in galleries">
+          <div class="col-sm-4 text-left" ng-repeat="gallery in galleries | filter:query  | orderBy: orderProp.value">
             <img src="{{gallery.thumbnailUrl}}" class="img-rounded center-block img-responsie" alt="" height=200 width=350>
             <h3>{{gallery.title}}</h3>
             <p><strong>Data:</strong> {{gallery.when | date:'dd-MMMM-yyyy'}}</p>
