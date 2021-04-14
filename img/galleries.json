@@ -1,0 +1,18 @@
+[
+        { "title":"Drukarka 3D ",
+        "when": "12-09-2012",
+        "thumbnailUrl":"g1.jpg"
+        },
+        { "title":"przecinarka plazmowa CNC",
+        "when": "01-11-2014",
+        "thumbnailUrl":"g2.jpg"
+        },
+        { "title":"Drukarka 3D SLA",
+        "when" : "04-29-2016",
+        "thumbnailUrl":"g3.jpg"
+        },
+        { "title":"Frezarka CNC",
+        "when" : "09-21-2020",
+        "thumbnailUrl":"g4.jpg"
+        }
+]
